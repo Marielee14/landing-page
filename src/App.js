@@ -6,11 +6,23 @@ import Statistics from "@components/Statistics";
 import HeroTwo from "@components/HeroTwo";
 import Footer from "@components/Footer";
 import ThreeTierPricing from "@components/Pricing";
+import theme from "./theme";
+import HeroHorizontal from "@components/HeroHorizontal"
+import "@fontsource/koho";
+import Fonts from "./Fonts";
+import "@fontsource/klee-one";
+import "@fontsource/inter";
+import "@fontsource/overpass";
+
 function App() {
   return (
-    <ChakraProvider>
+    // app을 Chakra provider로 감싸 주어야 한다.
+
+    <ChakraProvider theme={theme}>
+      <Fonts />
       <NavBar />
       <Hero />
+      <HeroHorizontal/>
       <Features />
       <Statistics />
       <ThreeTierPricing />

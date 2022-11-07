@@ -6,7 +6,12 @@ import {
   Text,
   Button,
   Icon,
+  Image,
+  Box,
 } from "@chakra-ui/react";
+import topSecret from "@assets/top-secret.png";
+import MW2 from "@assets/MW2.jpg";
+
 
 export default function CallToActionWithIllustration() {
   return (
@@ -17,40 +22,58 @@ export default function CallToActionWithIllustration() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
       >
-        <Heading
-          fontWeight={600}
+        {/* <Heading
+          fontWeight={800}
           fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
           lineHeight={"110%"}
         >
-          Meeting scheduling{" "}
-          <Text as={"span"} color={"orange.400"}>
-            made easy
-          </Text>
+          All your{" "}
+          <Text as={"span"} color={`#afe80c`}>
+            {""} {"{Gaming NFT trades}"}
+          </Text>{" "}
+          in one place
+        </Heading> */}
+        <Heading
+          fontWeight={1000}
+          fontSize={{ base: "5xl", sm: "4xl", md: "6xl" }}
+          lineHeight={"110%"}
+          overflow={"hidden"}
+          verticalAlign={"middle"}
+        >
+          PLAY{" "}
+          <Text as={"span"} color={`#afe80c`}>
+            {""} {"   TRADE "}
+          </Text>{" "}
+          CONNECT
         </Heading>
-        <Text color={"gray.500"} maxW={"3xl"}>
-          Never miss a meeting. Never be late for one too. Keep track of your
-          meetings and receive smart reminders in appropriate times. Read your
-          smart “Daily Agenda” every morning.
+
+        <Text color={"gray"} maxW={"xl"} fontSize={{ base: "xl", lg: "lg" }}>
+          All your gaming NFT
+          trades in one place. 
         </Text>
         <Stack spacing={6} direction={"row"}>
           <Button
             rounded={"full"}
             px={6}
-            colorScheme={"orange"}
-            bg={"orange.400"}
-            _hover={{ bg: "orange.500" }}
+            variant={"outline"}
+            bg={`"#192102"`}
+            color={"white"}
+            _hover={{ bg: `"#BDF427"` }}
           >
             Get started
           </Button>
-          <Button rounded={"full"} px={6}>
+          <Button
+            rounded={"full"}
+            bg={"grey.900"}
+            _hover={{ bg: "grey.500" }}
+            variant={"outline"}
+            px={6}
+          >
             Learn more
           </Button>
         </Stack>
-        <Flex w={"full"}>
-          <Illustration
-            height={{ sm: "24rem", lg: "28rem" }}
-            mt={{ base: 12, sm: 16 }}
-          />
+        <Flex w={"full"} align={"center"} justify={"center"} pos={"relative"}>
+          <Image src={MW2} height={"100hw"} marginTop={"20px"} />
         </Flex>
       </Stack>
     </Container>
