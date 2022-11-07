@@ -12,7 +12,6 @@ import {
 import topSecret from "@assets/top-secret.png";
 import MW2 from "@assets/MW2.jpg";
 
-
 export default function CallToActionWithIllustration() {
   return (
     <Container maxW={"5xl"}>
@@ -35,21 +34,25 @@ export default function CallToActionWithIllustration() {
         </Heading> */}
         <Heading
           fontWeight={1000}
-          fontSize={{ base: "5xl", sm: "4xl", md: "6xl" }}
+          fontSize={{ base: "6xl", sm: "4xl", md: "7xl" }}
           lineHeight={"110%"}
           overflow={"hidden"}
           verticalAlign={"middle"}
         >
           PLAY{" "}
           <Text as={"span"} color={`#afe80c`}>
-            {""} {"   TRADE "}
+            {""} {"  CONNECT "}
           </Text>{" "}
-          CONNECT
+          TRADE
         </Heading>
 
-        <Text color={"gray"} maxW={"xl"} fontSize={{ base: "xl", lg: "lg" }}>
-          All your gaming NFT
-          trades in one place. 
+        <Text
+          color={"gray"}
+          maxW={"xl"}
+          fontSize={{ base: "3xl", sm: "xl", md: "3xl" }}
+          overflow={"hidden"}
+        >
+          All your gaming NFT trades in one place
         </Text>
         <Stack spacing={6} direction={"row"}>
           <Button

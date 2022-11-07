@@ -7,12 +7,13 @@ const theme = extendTheme({
         backgroundColor: "black",
         color: "white",
       },
+    
     },
   },
 
   fonts: {
-    body: ` "Overpass", sans-serif;`, // 만약 font를 받아 오는것을 실패했을 때는 sans-serif를 써라. (뒤에 줄줄이 작성해 줄 수 있음.)
-    heading: `"Overpass", sans-serif; `,
+    body: ` "Aldrich", sans-serif; `, // 만약 font를 받아 오는것을 실패했을 때는 sans-serif를 써라. (뒤에 줄줄이 작성해 줄 수 있음.)
+    heading: `"Aldrich", sans-serif;  `,
   },
 });
 

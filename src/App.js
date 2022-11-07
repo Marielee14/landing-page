@@ -13,6 +13,9 @@ import Fonts from "./Fonts";
 import "@fontsource/klee-one";
 import "@fontsource/inter";
 import "@fontsource/overpass";
+import "@fontsource/aldrich";
+
+
 
 function App() {
   return (
