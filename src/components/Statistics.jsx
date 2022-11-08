@@ -1,3 +1,46 @@
+//TODO: odometer https://dev.to/beumsk/add-animating-numbers-on-your-site-with-odometer-4b9i
+/* <div
+  class="pp-counter-number pp-counter-number-4c52e4a odometer odometer-auto-theme"
+  data-from="0"
+  data-to="225"
+  data-speed="1500"
+  data-separator="yes"
+  data-separator-char=""
+>
+  <div class="odometer-inside">
+    <span class="odometer-digit">
+      <span class="odometer-digit-spacer">8</span>
+      <span class="odometer-digit-inner">
+        <span class="odometer-ribbon">
+          <span class="odometer-ribbon-inner">
+            <span class="odometer-value">2</span>
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class="odometer-digit">
+      <span class="odometer-digit-spacer">8</span>
+      <span class="odometer-digit-inner">
+        <span class="odometer-ribbon">
+          <span class="odometer-ribbon-inner">
+            <span class="odometer-value">2</span>
+          </span>
+        </span>
+      </span>
+    </span>
+    <span class="odometer-digit">
+      <span class="odometer-digit-spacer">8</span>
+      <span class="odometer-digit-inner">
+        <span class="odometer-ribbon">
+          <span class="odometer-ribbon-inner">
+            <span class="odometer-value">5</span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </div>
+</div>; */
+
 import {
   Box,
   chakra,
@@ -17,7 +60,6 @@ function StatsCard(props) {
   const { title, stat, icon } = props; //구조분해 사용
   return (
     <Stat
-
       px={{ base: 2, md: 4 }}
       py={"5"}
       shadow={"xl"}

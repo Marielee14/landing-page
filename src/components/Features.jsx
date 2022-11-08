@@ -49,6 +49,7 @@ export default function SplitWithImage() {
             p={2}
             alignSelf={"flex-start"}
             rounded={"md"}
+            
           >
             Our Mission
           </Text>
