@@ -39,13 +39,14 @@ export default function SplitScreen() {
                 //bg: "blue.400",
                 zIndex: -1,
               }}
+              textShadow={"0 0 0.15em #afe80c"}
             >
               All your {""}
               <Text as={"span"} color={`#afe80c`}>
-                Gaming NFT trades
+                Gaming NFT Tradings
               </Text>
               {""}
-              <br /> in one place
+              <br /> In one place
             </Text>
             {/* <Text color={"blue.400"} as={"span"}></Text>{" "} */}
           </Heading>
