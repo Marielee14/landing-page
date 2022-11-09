@@ -17,6 +17,7 @@ export default function SplitScreen() {
           <Heading fontSize={{ base: "5xl", md: "6xl", lg: "7xl" }}>
             {/* <Heading
           fontWeight={800}
+          
           fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
           lineHeight={"110%"}
         >
@@ -39,7 +40,7 @@ export default function SplitScreen() {
                 //bg: "blue.400",
                 zIndex: -1,
               }}
-              textShadow={"0 0 0.15em #afe80c"}
+              //textShadow={"0 0 0.15em #afe80c"}
             >
               All your {""}
               <Text as={"span"} color={`#afe80c`}>
@@ -57,18 +58,20 @@ export default function SplitScreen() {
           <Stack direction={{ base: "column", md: "row" }} spacing={4}>
             <Button
               rounded={"full"}
-              bg={"#253203"}
+              height={"50px"}
+              bg={"black"}
               color={"white"}
               _hover={{
-                bg: "black",
+                bg: "grey",
               }}
             >
               Find your game
             </Button>
             <Button
               rounded={"full"}
-              bg={"#8DA253"}
-              color={"black"}
+              bg={"black"}
+              height={"50px"}
+              color={"white"}
               _hover={{
                 bg: "grey",
               }}

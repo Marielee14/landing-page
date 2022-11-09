@@ -14,6 +14,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -21,6 +22,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import Kaikas from "@assets/kaikas.png";
+
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -72,16 +75,21 @@ export default function WithSubnavigation() {
         >
           <Button
             as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
+            width={"200px"}
+            height={"28px"}
+            fontSize={"md"}
+            fontWeight={700}
             variant={"link"}
             href={"#"}
+            bg={"rgb(247, 33, 25)"}
+            color={"black"}
           >
-            Sign In
+            Submit Your Game
           </Button>
-          <Button
+          {/* <Button
+           
             display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
+            fontSize={"md"}
             fontWeight={600}
             color={"white"}
             bg={"#BBC2CC"}
@@ -89,9 +97,27 @@ export default function WithSubnavigation() {
             _hover={{
               bg: "#afe80c",
             }}
+        
           >
             Sign Up
-          </Button>
+          </Button> */}
+
+          <Box
+            as="button"
+            borderRadius="md"
+            bg="white"
+            px={4}
+            h={"29px"}
+          >
+           
+            <Image
+              boxSize="20px"
+              objectFit="cover"
+              src={Kaikas}
+           
+              href={"#"}
+            />
+          </Box>
         </Stack>
       </Flex>
 
@@ -257,41 +283,38 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Inspiration",
+    label: "Games",
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
+        label: "Top games ",
+        subLabel: "Game Ranking",
         href: "#",
       },
       {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
+        label: "Newly Added",
+        subLabel: "Trending games to play",
         href: "#",
       },
     ],
   },
   {
-    label: "Find Work",
+    label: "NFTs",
     children: [
       {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
+        label: "Top NFTs",
+        subLabel: "NFT Rankings",
         href: "#",
       },
       {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
+        label: "Newly Added",
+        subLabel: "Trending NFTs to watch",
         href: "#",
       },
     ],
   },
   {
-    label: "Learn Design",
+    label: "About Us",
     href: "#",
   },
-  {
-    label: "Hire Designers",
-    href: "#",
-  },
+
 ];
