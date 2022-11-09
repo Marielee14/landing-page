@@ -24,7 +24,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Fonts />
       <NavBar />
-      <Hero />
+   
       <HeroHorizontal/>
       <Features />
       <Statistics />

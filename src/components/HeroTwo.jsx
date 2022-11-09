@@ -8,12 +8,13 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
+  Flex
 } from "@chakra-ui/react";
 
 export default function CallToActionWithAnnotation() {
   return (
     <>
-      <Container maxW={"3xl"}>
+      <Flex height={"100vh"} justify={"center"} align = {"center"}>
         <Stack
           as={Box}
           textAlign={"center"}
@@ -25,12 +26,12 @@ export default function CallToActionWithAnnotation() {
             fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
           >
-            Make money from <br />
+            Play and Trade today<br />
             <Text as={"span"} color={"green.400"}>
-              your audience
+              with the community
             </Text>
           </Heading>
-          <Text color={"gray.500"}>
+          <Text maxW={"4xl"}>
             Monetize your content by charging your most loyal readers and reward
             them loyalty points. Give back to your loyal readers by granting
             them access to your pre-releases and sneak-peaks.
@@ -51,7 +52,7 @@ export default function CallToActionWithAnnotation() {
                 bg: "green.500",
               }}
             >
-              Get Started
+              Join Discord
             </Button>
             <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
               Learn more
@@ -70,15 +71,15 @@ export default function CallToActionWithAnnotation() {
                 fontFamily={"Caveat"}
                 position={"absolute"}
                 right={"-125px"}
-                top={"-15px"}
+                top={"-18px"}
                 transform={"rotate(10deg)"}
               >
-                Starting at $15/mo
+                **Events for Newbies
               </Text>
             </Box>
           </Stack>
         </Stack>
-      </Container>
+      </Flex>
     </>
   );
 }
