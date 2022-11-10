@@ -55,6 +55,8 @@ import {
 import { BsPerson } from "react-icons/bs";
 import { FiServer } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
+import { forwardRef } from "react";
+
 
 function StatsCard(props) {
   const { title, stat, icon } = props; //구조분해 사용
@@ -67,28 +69,12 @@ function StatsCard(props) {
       borderColor={"black"}
       rounded={"lg"}
     >
-      <Flex justifyContent={"space-between"}>
-        <Box pl={{ base: 2, md: 4 }}>
-          <StatLabel fontWeight={"medium"} isTruncated>
-            {title}
-          </StatLabel>
-          <StatNumber fontSize={"2xl"} fontWeight={"medium"}>
-            {stat}
-          </StatNumber>
-        </Box>
-        <Box
-          my={"auto"}
-          color={useColorModeValue("gray.800", "gray.200")}
-          alignContent={"center"}
-        >
-          {icon}
-        </Box>
-      </Flex>
+
     </Stat>
   );
 }
 
-export default function BasicStatistics() {
+const Statistics = forwardRef((props, ref) => {
   return (
     <Flex
       direction={"column"}
@@ -97,6 +83,7 @@ export default function BasicStatistics() {
       align={"center"}
       h={"100vh"}
       pos={"relative"}
+      ref={ref}
     >
       <Box
         w={"25%"}
@@ -134,4 +121,6 @@ export default function BasicStatistics() {
       </SimpleGrid>
     </Flex>
   );
-}
+});
+
+export default Statistics

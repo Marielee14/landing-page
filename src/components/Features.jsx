@@ -10,12 +10,14 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { forwardRef } from "react";
 import {
   IoAnalyticsSharp,
   IoLogoBitcoin,
   IoSearchSharp,
 } from "react-icons/io5";
 import { MdFactCheck } from "react-icons/md";
+
 
 const Feature = ({ text, icon, iconBg }) => {
   return (
@@ -35,9 +37,9 @@ const Feature = ({ text, icon, iconBg }) => {
   );
 };
 
-export default function SplitWithImage() {
+const Features = forwardRef((props, ref) => {
   return (
-    <Flex py={12} px={200} justify={"center"} align={"center"}>
+    <Flex py={12} px={200} justify={"center"} align={"center"} ref={ref}>
       <SimpleGrid rows={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Text
@@ -87,4 +89,6 @@ export default function SplitWithImage() {
       </SimpleGrid>
     </Flex>
   );
-}
+});
+
+export default Features;

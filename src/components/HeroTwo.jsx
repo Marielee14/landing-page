@@ -8,13 +8,14 @@ import {
   Icon,
   useColorModeValue,
   createIcon,
-  Flex
+  Flex,
 } from "@chakra-ui/react";
+import { forwardRef } from "react";
 
-export default function CallToActionWithAnnotation() {
-  return (
+const HeroTwo = forwardRef((props, ref) => {
+    return (
     <>
-      <Flex height={"100vh"} justify={"center"} align = {"center"}>
+      <Flex height={"100vh"} justify={"center"} align={"center"} ref={ref}>
         <Stack
           as={Box}
           textAlign={"center"}
@@ -26,15 +27,14 @@ export default function CallToActionWithAnnotation() {
             fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
             lineHeight={"110%"}
           >
-            Play and Trade today<br />
-            <Text as={"span"} color={"green.400"}>
+            Play and Trade today
+            <br />
+            <Text as={"span"} color={`#afe80c`}>
               with the community
             </Text>
           </Heading>
           <Text maxW={"4xl"}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+            Monetize your gaming assets by trading your NFTs. blahblah
           </Text>
           <Stack
             direction={"column"}
@@ -44,13 +44,15 @@ export default function CallToActionWithAnnotation() {
             position={"relative"}
           >
             <Button
-              colorScheme={"green"}
-              bg={"green.400"}
+              href={"//discord.gg/H2FbDGwT"}
+              bg={"#afe80c"}
               rounded={"full"}
               px={6}
               _hover={{
                 bg: "green.500",
               }}
+              color={"black"}
+              mt={"20px"}
             >
               Join Discord
             </Button>
@@ -68,10 +70,10 @@ export default function CallToActionWithAnnotation() {
               />
               <Text
                 fontSize={"lg"}
-                fontFamily={"Caveat"}
+                color={"rgb(247, 33, 25)"}
                 position={"absolute"}
                 right={"-125px"}
-                top={"-18px"}
+                top={"-5px"}
                 transform={"rotate(10deg)"}
               >
                 **Events for Newbies
@@ -82,7 +84,7 @@ export default function CallToActionWithAnnotation() {
       </Flex>
     </>
   );
-}
+});
 
 const Arrow = createIcon({
   displayName: "Arrow",
@@ -96,3 +98,5 @@ const Arrow = createIcon({
     />
   ),
 });
+
+export default HeroTwo;
